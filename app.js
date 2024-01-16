@@ -3,7 +3,7 @@ import bodyParser from "body-parser"
 import fetch from 'node-fetch';
 
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3000
 const app = express()
 let apiKey = 'f19435857b0f7f57e4ffe166ba50a268';
 
