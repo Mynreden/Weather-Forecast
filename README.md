@@ -28,7 +28,7 @@ Weather Map is a web application that allows users to retrieve and display curre
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/weather-map.git
+   git clone https://github.com/Mynreden/Weather-Forecast.git
 ## Usage
 1. Start the server:
 
