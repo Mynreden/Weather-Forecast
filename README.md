@@ -33,7 +33,7 @@ Weather Map is a web application that allows users to retrieve and display curre
    1. Start the server:
    
    ```bash
-   node app.js``
+   node app.js```
    
    2. Visit http://localhost:3000 in your web browser.
    
