@@ -30,19 +30,19 @@ Weather Map is a web application that allows users to retrieve and display curre
    ```bash
    git clone https://github.com/your-username/weather-map.git
 ## Usage
-   1. Start the server:
-   
-   ```bash
-   node app.js```
-   
-   2. Visit http://localhost:3000 in your web browser.
-   
-   Enter a city name or click on the map to get the current weather information.
+1. Start the server:
 
-   Click the "Get Extended Forecast" button to retrieve a 14-day extended weather forecast
+   ```bash
+   node app.js
+
+2. Visit **http://localhost:3000** in your web browser.
+
+Enter a city name or click on the map to get the current weather information.
+
+Click the "Get Extended Forecast" button to retrieve a 14-day extended weather forecast
 
 ## Usage Libraries and APIs
 **OpenWeatherMap API** for weather data
-Google Maps JavaScript API for map functionality
-Google Translate API for language translation
-Restcountries API for country information
+**Google Maps** JavaScript API for map functionality
+**Google Translate API** for language translation
+**Restcountries API** for country information
