@@ -46,7 +46,7 @@ function placeMarkerAndPanTo(latLng, map) {
 
 async function getData(data){
     localStorage.setItem("data", JSON.stringify(data))
-    fetch('http://localhost:3001/info', {
+    fetch('http://localhost:3000/info', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
@@ -78,7 +78,7 @@ async function renderData(data){
 
 document.getElementById("extendedbtn").addEventListener("click", async ()=>{
     let data = JSON.parse(localStorage.getItem("data"));
-    data = await fetch('http://localhost:3001/extended', {
+    data = await fetch('http://localhost:3000/extended', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
@@ -102,7 +102,7 @@ document.getElementById("extendedbtn").addEventListener("click", async ()=>{
     });
     // <strong>Sunrise Time:</strong> ${ new Date(day.sunrise * 1000).toLocaleTimeString()}<br>
     // <strong>Sunset Time:</strong> ${ new Date(day.sunset * 1000).toLocaleTimeString()}
-    document.getElementById("extendedTable").style.display = "block";
+    document.getElementById("extendedTable").style.display = "block";   
     document.getElementById("extended").innerHTML = text;
             
 })
