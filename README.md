@@ -42,7 +42,11 @@ Enter a city name or click on the map to get the current weather information.
 Click the "Get Extended Forecast" button to retrieve a 14-day extended weather forecast
 
 ## Usage Libraries and APIs
+
 **OpenWeatherMap API** for weather data
+
 **Google Maps** JavaScript API for map functionality
+
 **Google Translate API** for language translation
+
 **Restcountries API** for country information
