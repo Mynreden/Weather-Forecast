@@ -1,11 +1,12 @@
-import express from "express";
-import bodyParser from "body-parser"
-import fetch from 'node-fetch';
-import dotenv from 'dotenv'
-import mongoose from "mongoose";
-import User from "./models/UserModel.js";
-import Weather from "./models/WeatherModel.js";
-import path from "path"
+const express = require('express');
+const bodyParser = require('body-parser');
+const fetch = require('node-fetch');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const User = require('./models/UserModel');
+const Weather = require('./models/WeatherModel');
+const path = require('path');
+
 
 dotenv.config()
 const mongoUrl = process.env.MONGO_URL
@@ -196,7 +197,7 @@ try {
 } 
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${port}`);
   });
 
 module.exports = app;
