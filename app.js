@@ -17,6 +17,7 @@ let apiKey = 'f19435857b0f7f57e4ffe166ba50a268';
 const staticDir = path.join(process.cwd(), 'public');
 
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 app.use('/public', express.static(staticDir));
 
@@ -97,7 +98,7 @@ app.post("/extended", async (req, res) => {
 })
 
 app.get("/", async (req, res) => {
-    return res.render('auth.ejs')
+    return res.render('auth')
 })
 
 app.post("/login", async (req, res) => {
@@ -126,7 +127,7 @@ app.post("/registration", async (req, res) => {
 })
 
 app.get("/main", async (req, res) => {
-    return res.render("index.ejs")
+    return res.render("index")
 })
 
 app.post("/history", async (req, res) => {
@@ -136,7 +137,7 @@ app.post("/history", async (req, res) => {
 })
 
 app.get("/admin", async (req, res) => {
-    return res.render("admin.ejs")
+    return res.render("admin")
 })
 
 app.post("/admin/login", async (req, res) => {
@@ -153,7 +154,7 @@ app.post("/admin/login", async (req, res) => {
 
 app.get("/adminpanel", async (req, res) => {
     const usersList = await User.find();
-    return res.render("adminPanel.ejs", {usersList})
+    return res.render("adminPanel", {usersList})
 })
 
 app.post("/update/users", async (req, res) => {
