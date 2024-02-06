@@ -17,7 +17,7 @@ let apiKey = 'f19435857b0f7f57e4ffe166ba50a268';
 const staticDir = path.join(process.cwd(), 'public');
 
 app.set("view engine", "ejs");
-app.set('views', path.join(__dirname, 'views'));
+app.set('views',path.join(process.cwd(), 'views'));
 
 app.use('/public', express.static(staticDir));
 
