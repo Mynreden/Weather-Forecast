@@ -1,12 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const fetch = require('node-fetch');
-const dotenv = require('dotenv');
-const mongoose = require('mongoose');
-const User = require('./models/UserModel');
-const Weather = require('./models/WeatherModel');
-const path = require('path');
-
+import express from "express";
+import bodyParser from "body-parser"
+import fetch from 'node-fetch';
+import dotenv from 'dotenv'
+import mongoose from "mongoose";
+import User from "./models/UserModel.js";
+import Weather from "./models/WeatherModel.js";
+import path from "path"
 
 dotenv.config()
 const mongoUrl = process.env.MONGO_URL
@@ -189,7 +188,7 @@ app.delete("/delete/users/:id", async (req, res) => {
 
 let db = mongoose.Mongoose;
 try {
-    db = mongoose.connect(mongoUrl, { serverSelectionTimeoutMS });
+    db = await mongoose.connect(mongoUrl, { serverSelectionTimeoutMS });
 } catch (err) {
     console.error(err)
     mongoose.disconnect()
@@ -197,7 +196,7 @@ try {
 } 
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${PORT}`);
   });
 
 module.exports = app;

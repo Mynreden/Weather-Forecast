@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-
+import mongoose from "mongoose"
+import { SchemaTypes } from "mongoose";
 
 let weatherSchema = new mongoose.Schema({ // Scheme how nodeJs will interact with MongoDB. In this part we define attributes of model
     userId: {type: String, require: true},
