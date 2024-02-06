@@ -117,7 +117,7 @@ const logout = () => {
 
 function getHistory() {
     const data = {user}
-    fetch('http://localhost:3000/history', {
+    fetch('/history', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
