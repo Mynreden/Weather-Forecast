@@ -196,6 +196,4 @@ try {
 } 
 
 
-app.listen(port, () => {
-    console.log(`Listening in http://localhost:${port}`)
-})
+module.exports = app:

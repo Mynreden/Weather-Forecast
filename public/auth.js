@@ -26,7 +26,7 @@ loginForm.addEventListener("submit", async (e) => {
     let username = document.getElementById("usernameIn").value
     let password = document.getElementById("passwordIn").value
 
-    const data = await fetch('http://localhost:3000/login', {
+    const data = await fetch('/login', {
                 method: 'POST',
                 body: JSON.stringify({username, password}),
                 headers: {
@@ -54,7 +54,7 @@ signUpForm.addEventListener("submit", async (e) => {
     let username = document.getElementById("username").value
     let password = document.getElementById("password").value
 
-    const data = await fetch('http://localhost:3000/registration', {
+    const data = await fetch('/registration', {
         method: 'POST',
         body: JSON.stringify({username, password}),
         headers: {

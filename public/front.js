@@ -49,7 +49,7 @@ function placeMarkerAndPanTo(latLng, map) {
 
 async function getData(data){
     data.user = user;
-    fetch('http://localhost:3000/info', {
+    fetch('/info', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
@@ -81,7 +81,7 @@ async function renderData(data){
 
 document.getElementById("extendedbtn").addEventListener("click", async ()=>{
     let data = JSON.parse(localStorage.getItem("data"));
-    data = await fetch('http://localhost:3000/extended', {
+    data = await fetch('/extended', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
