@@ -189,7 +189,7 @@ app.delete("/delete/users/:id", async (req, res) => {
 
 let db = mongoose.Mongoose;
 try {
-    db = await mongoose.connect(mongoUrl, { serverSelectionTimeoutMS });
+    db = mongoose.connect(mongoUrl, { serverSelectionTimeoutMS });
 } catch (err) {
     console.error(err)
     mongoose.disconnect()
