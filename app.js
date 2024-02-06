@@ -195,5 +195,8 @@ try {
     process.abort()
 } 
 
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+  });
 
-module.exports = app:
+module.exports = app;
