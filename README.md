@@ -2,7 +2,7 @@
 
 Weather Map is a web application that allows users to retrieve and display current weather information for a given city or location. It leverages the OpenWeatherMap API for weather data and Google Maps API for map functionality.
 
-## To see project you just have to open link:
+## To see the project, just open the link::
  1. **https://weather-forecast-seven-beta.vercel.app/**
  2. **https://weather-forecast-seven-beta.vercel.app/admin** to login as admin. **Username: admin, Password: admin**
     
