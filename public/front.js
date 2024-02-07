@@ -1,3 +1,4 @@
+
 let map;
 let marker;
 
@@ -48,6 +49,7 @@ function placeMarkerAndPanTo(latLng, map) {
 }
 
 async function getData(data){
+    localStorage.setItem("data", JSON.stringify(data))
     data.user = user;
     fetch('/info', {
                 method: 'POST',
